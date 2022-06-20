@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+}
+
+/*---------------------------------HEADER---------------------------------*/
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 2px solid hsl(223, 64%, 98%);
+}
+
+#menu_button {
+    display: none;
+}
+
+#navigation {
+    display: flex;
+    align-items: baseline;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    margin-right: 40px;
+}
+
+header #navigation #nav {
+    display: flex;
+}
+
+header #navigation #nav li {
+    list-style: none;
+    padding: 0 10px;
+    position: relative;
+}
+
+header #navigation #nav li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    color: hsl(26, 100%, 55%);
+    position: absolute;
+    top: -10px;
+    left: 0;
+    transition: 0.5;
+}
+
+header #navigation #nav li:hover::after {
+    width: 100%;
+}
+
+header #navigation #nav li a{
+    color: hsl(219, 9%, 45%);
+}
+
+#avatar {
+    width: 40px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+#cart {
+    cursor: pointer;
+}
+
+/*---------------------------------BODY---------------------------------*/
+
+#product {
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+}
+
+#main_image {
+    width: 80%;
+    border-radius: 15px;
+}
+
+#thumbnails {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.thumbnail {
+    width: 20%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.selected_thumbnail {
+    width: 20%;
+    border-radius: 8px;
+    border: 2px solid hsl(26, 100%, 55%);
+    position: relative;
+}
+
+.selected_thumbnail::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#company {
+    color: hsl(26, 100%, 55%);
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+#title {
+    font-size: 36px;
+    color: hsl(220, 13%, 13%);
+    margin-top: 10px;
+}
+
+#description {
+    color: hsl(219, 9%, 45%);
+    line-height: 1.35rem;
+    margin: 20px 0;
+}
+
+#price {
+    font-size: 36px;
+    color: hsl(220, 13%, 13%);
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+#product .actions {
+    margin: 35px 0;
+}
+
+#discount {
+    background-color: hsl(25, 100%, 94%);
+    font-size: 16px;
+    padding: 3px 6px;
+    color: hsl(26, 100%, 55%);
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#old_price {
+    color: hsl(220, 14%, 75%);
+    text-decoration: line-through;
+    font-weight: 700;
+}
+
+#quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 18%;
+    min-width: 100px;
+    padding: 15px;
+    background-color: hsl(223, 64%, 98%);
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+#plus {
+    cursor: pointer;
+}
+
+#minus {
+    cursor: pointer;
+}
+
+.cta_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 15px;
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s ease-out;
+}
+
+.cta_button:hover {
+    box-shadow: 4px 10px 30px hsla(26, 100%, 55%, 0.4);
+}
+
+.cta_button h4 {
+    color: white;
+    margin-left: 15px;
+}
+
+.cta_button img {
+    width: 18px;
+    color: white;
+}
+
+/*---------------------------------POP UPS---------------------------------*/
+
+#my_cart{
+    background-color: white;
+    box-shadow:0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    position: absolute;
+    top: 80px;
+    left: 70%;
+    border-radius: 5px;
+    display: none;
+}
+
+#my_cart h4 {
+    padding: 20px ;
+    border-bottom: 2px solid hsl(223, 64%, 98%);
+    color: hsl(220, 13%, 13%);
+}
+
+#my_cart #cart_items {
+    padding: 20px;
+    color: hsl(219, 9%, 45%);
+}
+
+#cart_items {
+    display: none;
+    gap: 10px;
+    font-size: 14px;
+    align-items: center;
+}
+
+#my_cart>p{
+    color: hsl(219, 9%, 45%);
+    padding: 20px;
+}
+
+#cart_items p, span {
+    color: hsl(219, 9%, 45%);
+    margin: 0 2px;
+}
+
+#cart_items #final_price {
+    color: hsl(220, 13%, 13%);
+    font-weight: 700;
+}
+
+#delete {
+    cursor: pointer;
+}
+
+/*---------------------------------MOBILE---------------------------------*/
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 20px 5%;
+    }
+    
+    #nav li {
+        display: none;
+    }
+
+    #menu_button {
+        display: block;
+        margin-right: 10%;
+        transform: scaleX(1.2);
+        cursor: pointer;
+    }
+        
+        
+    #avatar {
+        width: 28px;
+        margin-left: 30px;
+        cursor: pointer;
+    }
+
+    #cart {
+        width: 24px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    #product {
+        display: block;
+        padding: 0;
+    }
+
+    #thumbnails {
+        display: none;
+    }
+
+    #main_image {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #informations {
+        width: 80%;
+        margin: 30px auto;
+    }
+
+    .actions {
+        display: block;
+    }
+
+    #quantity {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cta_button {
+        width: 100%;
+    }
+
+    #checkout {
+        width: 100%;
+        display: block;
+        padding: 0;
+    }
+    #checkout h4 {
+        color: white;
+    }
+    
+    #my_cart{
+        width: 90%;
+        margin: 0 auto;
+        position: absolute;
+        top: 80px;
+        left: 5%;
+    }
+}
+
+
+
+/* 
+## Colors
+
+### Primary
+
+- Orange: hsl(26, 100%, 55%)
+- Pale orange: hsl(25, 100%, 94%)
+
+### Neutral
+
+- Very vark blue: hsl(220, 13%, 13%)
+- Dark grayish blue: hsl(219, 9%, 45%)
+- Grayish blue: hsl(220, 14%, 75%)
+- Light grayish blue: hsl(223, 64%, 98%)
+- White: hsl(0, 0%, 100%)
+- Black (with 75% opacity for lightbox background): hsl(0, 0%, 0%)
+ */

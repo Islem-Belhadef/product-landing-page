@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-------------------------------------HEADER------------------------------------->
+
+    <header class="container">
+        <div id="navigation">
+            <img src="assets/icon-menu.svg" alt="menu" id="menu_button">
+            <img src="assets/logo.svg" alt="logo" id="logo">
+            <ul id="nav">
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>     
+        <div class="actions">
+            <img src="assets/icon-cart.svg" alt="cart" id="cart">
+            <div id="my_cart">
+                <h4>Cart</h4>
+                <p id="empty">Your cart is empty</p>  
+                <div id="cart_items">
+                    <img src="assets/image-product-1.jpg" alt="product_image" width="40px" height="40px">
+                    <div id="product_info">
+                        <p id="product_title">Fall Limited Edition Sneakers</p>
+                        <p>$<span id="single_price">125.00</span>*<span id="quantity_bought">3</span>= $<span id="final_price">375.00</span></p>
+                    </div>
+                    <img src="assets/icon-delete.svg" alt="delete" id="delete"></img>
+                </div>
+                <!-- <div class="cta_button" id="checkout">
+                    <h4>Checkout</h4>
+                </div> -->
+            </div>
+            <img src="assets/image-avatar.png" alt="avatar" id="avatar">
+        </div>
+    </header>
+
+    <!-------------------------------------BODY------------------------------------->
+
+    <section id="product" class="container">
+        <div id="gellery">
+            <img src="assets/image-product-1.jpg" alt="image_product_1" id="main_image">
+            <div id="thumbnails">
+                <img src="assets/image-product-1-thumbnail.jpg" alt="image_product_1_thumbnail" id="image_1_thumbnail" class="thumbnail">
+                <img src="assets/image-product-2-thumbnail.jpg" alt="image_product_2_thumbnail" id="image_2_thumbnail" class="thumbnail">
+                <img src="assets/image-product-3-thumbnail.jpg" alt="image_product_3_thumbnail" id="image_3_thumbnail" class="thumbnail">
+                <img src="assets/image-product-4-thumbnail.jpg" alt="image_product_4_thumbnail" id="image_4_thumbnail" class="thumbnail">
+            </div>
+        </div>
+        <div id="informations">
+            <p id="company">SNEAKER COMPANY</p>
+            <h1 id="title">Fall Limited Edition Sneakers</h1>
+            <p id="description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+            <h2 id="price">$125.00<span id="discount">50%</span></h2>
+            <p id="old_price">$250.00</p>
+            <div class="actions">
+                <div id="quantity">
+                    <img src="assets/icon-minus.svg" alt="minus" id="minus">
+                    <h4 id="counter">0</h4>
+                    <img src="assets/icon-plus.svg" alt="minus" id="plus">
+                </div>
+                <div class="cta_button" id="add_button">
+                    <img src="assets/icon-cart-white.svg" alt="cart">
+                    <h4>Add to cart</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
